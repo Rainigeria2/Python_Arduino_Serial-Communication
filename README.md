@@ -23,7 +23,7 @@ If you are not getting any error, it means you installed it correct, else you ca
 
 **Step 3: Python Code**
 First up, we need a simple program to get the Python sending data over the serial port
-<!-- 
+
 # Importing Libraries
 import serial
 import time
@@ -37,11 +37,11 @@ while True:
     num = input("Enter a number: ") # Taking input from user
     value = write_read(num)
     print(value) # printing the value 
--->
+
     
 **Step 4: Arduino Code**
 
-<!-- 
+
 
 int x;
 
@@ -56,4 +56,4 @@ void loop() {
   Serial.print(x + 1);
 } 
 
--->
+
