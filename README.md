@@ -24,22 +24,19 @@ If you are not getting any error, it means you installed it correct, else you ca
 # Step 3: Python Code
 First up, we need a simple program to get the Python sending data over the serial port
 
-``# Importing Libraries
-import serial
-
-import time
-
-arduino = serial.Serial(port='COM4', baudrate=115200, timeout=.1)
-
-def write_read(x):
-    arduino.write(bytes(x, 'utf-8'))
-    time.sleep(0.05)
-    data = arduino.readline()
-    return data
-while True:
-    num = input("Enter a number: ") # Taking input from user
-    value = write_read(num)
-    print(value) # printing the value`` 
+``# Importing Libraries``
+``import serial``
+``import time``
+``arduino = serial.Serial(port='COM4', baudrate=115200, timeout=.1)``
+``def write_read(x):``
+    ``arduino.write(bytes(x, 'utf-8'))``
+    ``time.sleep(0.05)``
+    ``data = arduino.readline()``
+    ``return data``
+``while True:``
+    ``num = input("Enter a number: ") # Taking input from user``
+    ``value = write_read(num)``
+    ``print(value) # printing the value`` 
 
 # Step 4: Arduino Code
 
