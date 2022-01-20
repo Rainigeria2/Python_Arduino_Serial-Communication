@@ -13,41 +13,19 @@ PySerial is a Python API module which is used to read and write serial data to A
 
 1. Download the PySerial from the link above or Open CMD and type
  
- _pip install pyserial_
+ ``pip install pyserial``
 
 2. Install it by keeping the setting as the default. You should be sure that Pyserial worked correctly, To check this You can open IDLE and type in
 
-_import serial_
+``import serial``
 
 If you are not getting any error, it means you installed it correct, else you can check your installation.
 
 # Step 3: Python Code
 First up, we need a simple program to get the Python sending data over the serial port
 
-``# Importing Libraries``
-``import serial``
-``import time``
-``arduino = serial.Serial(port='COM4', baudrate=115200, timeout=.1)``
-``def write_read(x):``
-    ``arduino.write(bytes(x, 'utf-8'))``
-    ``time.sleep(0.05)``
-    ``data = arduino.readline()``
-    ``return data``
-``while True:``
-    ``num = input("Enter a number: ") # Taking input from user``
-    ``value = write_read(num)``
-    ``print(value) # printing the value`` 
+check repo for (python code)
 
 # Step 4: Arduino Code
 
-``int x;
-void setup() {
- Serial.begin(115200);
- Serial.setTimeout(1);
-}
-void loop() {
- while (!Serial.available());
- x = Serial.readString().toInt();
- Serial.print(x + 1);
-}``
-
+check repo for (arduino code)
